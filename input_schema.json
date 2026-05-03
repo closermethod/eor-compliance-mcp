@@ -1,0 +1,53 @@
+{
+  "title": "EOR Compliance MCP Input",
+  "description": "Pick a tool and the relevant params for your country/scenario.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "tool": {
+      "title": "Tool",
+      "type": "string",
+      "description": "Which EOR Compliance tool to call",
+      "enum": [
+        "get_country_eor_brief",
+        "get_misclassification_risk",
+        "get_eor_vs_entity_calc",
+        "get_termination_rules",
+        "get_statutory_benefits",
+        "get_visa_paths",
+        "get_eor_objection_handler",
+        "get_full_eor_pack"
+      ],
+      "editor": "select"
+    },
+    "country": {
+      "title": "Country",
+      "type": "string",
+      "description": "Country (required for most tools)",
+      "enum": ["uk", "ireland", "spain", "germany", "france", "netherlands", "nordics", "mexico", "brazil", "india", "japan", "singapore"],
+      "editor": "select"
+    },
+    "headcount": {
+      "title": "Planned headcount in country (12 months)",
+      "description": "Number of employees you plan to have in this country",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1000
+    },
+    "annual_salary_usd": {
+      "title": "Average annual salary (USD)",
+      "description": "Average gross annual salary per employee in USD",
+      "type": "integer",
+      "minimum": 10000,
+      "maximum": 1000000
+    },
+    "objection_type": {
+      "title": "EOR Objection",
+      "type": "string",
+      "description": "Type of EOR sales objection",
+      "enum": ["use_contractors_instead", "not_ready_to_commit", "too_expensive", "we_have_entity", "compliance_unclear", "termination_concerns", "data_privacy_worry", "competitor_offer"],
+      "editor": "select"
+    }
+  },
+  "required": ["tool"]
+}

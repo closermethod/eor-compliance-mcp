@@ -1,0 +1,18 @@
+{
+  "actorSpecification": 1,
+  "name": "eor-compliance-mcp",
+  "title": "EOR Compliance MCP — Global Hiring for AI Agents",
+  "description": "MCP server for AI agents handling EOR & global hiring conversations. 8 tools: country EOR briefs, misclassification risk analysis, EOR vs entity break-even calculator, termination rules, statutory benefits, work visa paths, objection handlers. Covers UK, IE, ES, DE, FR, NL, Nordics, Mexico, Brazil, India, Japan, Singapore. By Elisabeth Hitz - 3+ yrs EOR at Deel, Multiplier.",
+  "version": "1.0.0",
+  "buildTag": "latest",
+  "dockerfile": "./Dockerfile",
+  "dockerContextDir": ".",
+  "storages": { "dataset": { "actorInputSchemaId": "INPUT_SCHEMA" } },
+  "input": "./input_schema.json",
+  "categories": ["AI", "AGENTS", "MCP_SERVERS", "BUSINESS"],
+  "seoTitle": "EOR Compliance MCP for AI Agents | Global Hiring Intelligence",
+  "seoDescription": "MCP server for AI sales agents selling Employer-of-Record solutions. Country-specific compliance, misclassification risk, EOR vs entity calculator. Built from 3+ yrs at Deel, Multiplier.",
+  "isDeprecated": false,
+  "isAnonymouslyRunnable": true,
+  "isPublic": true
+}
